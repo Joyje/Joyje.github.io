@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Joyje's</title>
+<style>
+  body {
+    background-color: #0d1117;
+    color: #f0f6fc;
+  }
+  .PageSection {
+    width: 100%;
+  }
+  .showcase {
+    margin: 10px, 20%, 10px;
+    padding: 0px;
+  }
+</style>
+</head>
+
+<body align="center">
+
+  <div class='PageSection'>
+    
+  </div>
+
+  <div class='PageSection'>
+    <h2>Silly 2D canvas stuff</h2>
+    <div class='showcase'>
+      <input type='checkbox' class='toggle-content' id='toggle-CanvasMenu'>
+      <aside class='toggled-content' id='CanvasMenu'>
+        <div class='menu-button'>
+      		Silly stuff 1
+      	</div>
+      	<div class='menu-button'>
+      		Silly stuff 2
+      	</div>
+        <div class='menu-button'>
+        	Silly stuff 3
+      	</div>
+      </aside>
+      <div></div>
+    </div>
+    <p>
+      These where made in my early days of learning JavaScript, mostly as a way for me to explore and develop my programming skills.
+      You might recognize some of the ideas these projects build upon from Khanacademy.
+    </p>
+
+    <h2>WebGL Schläfli Illustrator</h2>
+    <div class='showcase'>
+      <script src="schlafli/ChildAppender.js"></script>
+      <script src="schlafli/sylvester.js"></script>
+      <script src="schlafli/glUtils.js"></script>
+      <script src="schlafli/Matrix.js"></script>
+      <script src="schlafli/Shaders.js"></script>
+      <script src="schlafli/Buffers.js"></script>
+
+      <!--Fragment shader-->
+      <script id="shader-fs" type="x-shader/x-fragment">
+      	varying lowp vec4 vColor;
+
+      	void main(void) {
+      		gl_FragColor = vColor;
+      	}
+      </script>
+
+      <!--Vertex shader-->
+      <script id="shader-vs" type="x-shader/x-vertex">
+      	attribute vec3 aVertexPosition;
+      	attribute vec4 aVertexColor;
+
+      	uniform mat4 uMVMatrix;
+      	uniform mat4 uPMatrix;
+
+        varying lowp vec4 vColor;
+
+      	void main(void) {
+      		gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+      		vColor = aVertexColor;
+        }
+      </script>
+      <div class="GLcontent"></div>
+      <script src="schlafli/WebGL.js"></script>
+      <script src="schlafli/schlafli.js"></script>
+    </div>
+  </div>
+</body>
+</html>
