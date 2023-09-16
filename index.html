@@ -8,12 +8,65 @@
     background-color: #0d1117;
     color: #f0f6fc;
   }
+  iframe {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
   .PageSection {
     width: 100%;
   }
   .showcase {
-    margin: 10px, 20%, 10px;
+    margin: auto;
     padding: 0px;
+    border-top: 1px solid #30363d;
+    border-bottom: 1px solid #30363d;
+    width: 704px;
+    height: 396px;
+    overflow: hidden;
+    display: grid;
+    gap: 0px;
+  }
+  .showcaseMenu {
+    margin: 0px;
+    padding: 0px;
+    width: 304px;
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .showcaseMenuButton {
+    margin: 0px;
+    border-top: 1px solid #30363d;
+    border-bottom: 1px solid #30363d;
+    width: 300;
+  }
+  .showcaseMenuButton:hover {
+    background-color: #21262d;
+  }
+  #CanvasMenu > .showcaseMenuButton {
+    height: 97px;
+  }
+  #GLmenu > .showcaseMenuButton {
+    height: 42px;
+  }
+  .showcaseContent {
+    margin: 0px;
+    padding: 0px;
+    width: 400px;
+    height: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .GLcontent {
+    width: 400px;
+    height: 400px;
   }
 </style>
 </head>
@@ -27,22 +80,37 @@
   <div class='PageSection'>
     <h2>Silly 2D canvas stuff</h2>
     <div class='showcase'>
-      <input type='checkbox' class='toggle-content' id='toggle-CanvasMenu'>
-      <aside class='toggled-content' id='CanvasMenu'>
-        <div class='menu-button'>
-      		Silly stuff 1
+      <aside class='showcaseMenu' id='CanvasMenu'>
+      	<div class='showcaseMenuButton' onclick='var canvas = document.getElementById("CanvasContent");
+                                                 var silly = document.createElement("iframe");
+                                                 silly.src = "KhanAcademy/ShootingStar.html"
+                                                 canvas.replaceChildren(silly);'>
+          <h3> Shooting Star </h3>
       	</div>
-      	<div class='menu-button'>
-      		Silly stuff 2
+      	<div class='showcaseMenuButton' onclick='var canvas = document.getElementById("CanvasContent");
+                                                 var silly = document.createElement("iframe");
+                                                 silly.src = "KhanAcademy/MakeItRain.html"
+                                                 canvas.replaceChildren(silly);'>
+          <h3> Make it Rain </h3>
       	</div>
-        <div class='menu-button'>
-        	Silly stuff 3
+      	<div class='showcaseMenuButton' onclick='var canvas = document.getElementById("CanvasContent");
+                                                 var silly = document.createElement("iframe");
+                                                 silly.src = "KhanAcademy/Piggyface.html"
+                                                 canvas.replaceChildren(silly);'>
+          <h3> Piggyface </h3>
+      	</div>
+      	<div class='showcaseMenuButton' onclick='var canvas = document.getElementById("CanvasContent");
+                                                 var silly = document.createElement("iframe");
+                                                 silly.src = "KhanAcademy/FishTank.html"
+                                                 canvas.replaceChildren(silly);'>
+          <h3> Fish Tank </h3>
       	</div>
       </aside>
-      <div></div>
+      <div class='showcaseContent' id='CanvasContent'>
+      </div>
     </div>
     <p>
-      These where made in my early days of learning JavaScript, mostly as a way for me to explore and develop my programming skills.
+      These where made in my early days of learning JavaScript, mostly as a way for me to explore and develop my programming skills.</br>
       You might recognize some of the ideas these projects build upon from Khanacademy.
     </p>
 
@@ -79,7 +147,8 @@
       		vColor = aVertexColor;
         }
       </script>
-      <div class="GLcontent"></div>
+      <aside class="showcaseMenu" id="GLmenu"></aside>
+      <div class="GLcontent showcaseContent"></div>
       <script src="schlafli/WebGL.js"></script>
       <script src="schlafli/schlafli.js"></script>
     </div>
