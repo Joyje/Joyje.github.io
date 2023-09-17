@@ -3,103 +3,138 @@
 <head>
   <meta charset="utf-8">
   <title>Joyje's</title>
+  <link rel="stylesheet" href="showcase.css">
+  <link rel="stylesheet" href="dropdown.css">
 <style>
   body {
+    margin: 0;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 10%, rgba(13,17,23,0.9) 40%, rgba(13,17,23,0.99) 45%, rgba(13,17,23,1) 50%), url(https://avatars.githubusercontent.com/u/15307480?s=400&u=80a61cb2aa174f0e1c05f2c92c4044ef816e786b&v=4);
+    background-attachment: fixed;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-color: #0d1117;
+    font-family: system-ui, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     color: #f0f6fc;
   }
-  iframe {
-    margin: 0;
-    padding: 0;
-    border: none;
-    width: 100%;
-    height: 100%;
+  h4 {
+    margin: 7px;
+    float: left;
+  }
+  a {
+    color: #1f6feb;
+  }
+  header a {
+    color: #f0f6fc;
+  }
+  ul {
+    margin: auto;
+    width: 400px;
+    text-align: left;
+  }
+  ul li {
+    margin: 3px;
+    padding: 3px;
   }
   .PageSection {
     width: 100%;
+    height: 70vh;
   }
-  .showcase {
+  .info {
     margin: auto;
-    padding: 0px;
-    border-top: 1px solid #30363d;
-    border-bottom: 1px solid #30363d;
-    width: 704px;
-    height: 396px;
-    overflow: hidden;
-    display: grid;
-    gap: 0px;
+    padding: 0;
+    width: 900px;
   }
-  .showcaseMenu {
+  .topBar {
+    height: 50px;
+    background-color: rgba(13, 17, 23, 0.5);
+    border-bottom: 1px solid #30363d;
+  }
+  #user {
     margin: 0px;
-    padding: 0px;
-    width: 304px;
+    padding: 9px;
+    width: 115px;
+    height: 32px;
+    float: right;
+  }
+  #user img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    float: right;
+  }
+  #user:hover {
+    background-color: rgba(33,38,45,0.5);
+  }
+  #pageTitle {
+    padding: 17%;
     height: 100%;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    font-size: 550%;
   }
-  .showcaseMenuButton {
-    margin: 0px;
-    border-top: 1px solid #30363d;
-    border-bottom: 1px solid #30363d;
-    width: 300;
-  }
-  .showcaseMenuButton:hover {
-    background-color: #21262d;
-  }
-  #CanvasMenu > .showcaseMenuButton {
+  #CanvasMenu > .showcaseMenuEntry {
     height: 97px;
-  }
-  #GLmenu > .showcaseMenuButton {
-    height: 42px;
-  }
-  .showcaseContent {
-    margin: 0px;
-    padding: 0px;
-    width: 400px;
-    height: 100%;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-  .GLcontent {
-    width: 400px;
-    height: 400px;
   }
 </style>
 </head>
 
 <body align="center">
-
   <div class='PageSection'>
-    
+    <header class='topBar'>
+      <div class='dropdown'>
+        <div id='certificateToggle' class='dropdownToggle'>
+          <h4>Certificates</h4>
+        </div>
+        <aside id='certificateDropdown' class='dropdownContent'>
+          <a href='https://www.sololearn.com/certificates/CT-8ZUZ8A3O'>
+	    <div><h4>HTML</h4></div>
+	  </a>
+          <a href='https://www.sololearn.com/certificates/'>
+	    <div><h4>CSS</h4></div>
+	  </a>
+          <a href='https://www.sololearn.com/certificates/CT-GSVE44IH'>
+	    <div><h4>JavaScript</h4></div>
+	  </a>
+        </aside>
+      </div>
+      <a href='https://github.com/Joyje'>
+        <div id='user'>
+          <h4>Github</h4>
+          <img src='https://avatars.githubusercontent.com/u/15307480?v=4'>
+        </div>
+      </a>
+    </header>
+    <i><h1 id='pageTitle'>Joyje's</h1></i>
   </div>
 
   <div class='PageSection'>
     <h2>Silly 2D canvas stuff</h2>
+    <div class='info'>
+    <p>
+      These where made in my early days of learning JavaScript, mostly as a way for me to explore and develop my programming skills.</br>
+      You might recognize some of the ideas these projects build upon from Khanacademy.
+    </p>
+    </div>
     <div class='showcase'>
       <aside class='showcaseMenu' id='CanvasMenu'>
-      	<div class='showcaseMenuButton' onclick='var canvas = document.getElementById("CanvasContent");
+      	<div class='showcaseMenuEntry' onclick='var canvas = document.getElementById("CanvasContent");
                                                  var silly = document.createElement("iframe");
                                                  silly.src = "KhanAcademy/ShootingStar.html"
                                                  canvas.replaceChildren(silly);'>
           <h3> Shooting Star </h3>
       	</div>
-      	<div class='showcaseMenuButton' onclick='var canvas = document.getElementById("CanvasContent");
+      	<div class='showcaseMenuEntry' onclick='var canvas = document.getElementById("CanvasContent");
                                                  var silly = document.createElement("iframe");
                                                  silly.src = "KhanAcademy/MakeItRain.html"
                                                  canvas.replaceChildren(silly);'>
           <h3> Make it Rain </h3>
       	</div>
-      	<div class='showcaseMenuButton' onclick='var canvas = document.getElementById("CanvasContent");
+      	<div class='showcaseMenuEntry' onclick='var canvas = document.getElementById("CanvasContent");
                                                  var silly = document.createElement("iframe");
                                                  silly.src = "KhanAcademy/Piggyface.html"
                                                  canvas.replaceChildren(silly);'>
           <h3> Piggyface </h3>
       	</div>
-      	<div class='showcaseMenuButton' onclick='var canvas = document.getElementById("CanvasContent");
+      	<div class='showcaseMenuEntry' onclick='var canvas = document.getElementById("CanvasContent");
                                                  var silly = document.createElement("iframe");
                                                  silly.src = "KhanAcademy/FishTank.html"
                                                  canvas.replaceChildren(silly);'>
@@ -109,12 +144,69 @@
       <div class='showcaseContent' id='CanvasContent'>
       </div>
     </div>
-    <p>
-      These where made in my early days of learning JavaScript, mostly as a way for me to explore and develop my programming skills.</br>
-      You might recognize some of the ideas these projects build upon from Khanacademy.
-    </p>
+  </div>
 
+  <div class='PageSection'>
     <h2>WebGL Schläfli Illustrator</h2>
+    <div class='info'>
+    <p>
+      <a href='https://en.wikipedia.org/wiki/Ludwig_Schläfli'>
+	Ludwig Schläfli
+      </a>
+      was a mathematician that laid the groundwork for what is today known as the
+      <a href='https://en.wikipedia.org/wiki/Schläfli_symbol'>
+	Schläfli symbols</a>,
+      </br>
+      a mathematical notation to represent all regular
+      <a href='https://en.wikipedia.org/wiki/List_of_regular_polytopes_and_compounds'>
+	 polytopes and tessellations</a>.
+    </p>
+    <p>
+      For now, my Illustrator only supports notations producing 
+      <a href='https://en.wikipedia.org/wiki/Regular_polygon'>
+        polygons</a>.
+      </br>
+      Higher dimension polytopes and tessellations can not currently be illustrated.
+    </p>
+    <p>
+      I have chosen a mixture of
+      <a href='https://en.wikipedia.org/wiki/Branko_Grünbaum'>
+	Grünbaums
+      </a>
+      and 
+      <a href='https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter'>
+        Coxeters
+      </a>
+      interpretations of the notation.
+      </br>
+      In addition, positive integers are also interpreted in the same way as if they where wrapped inside brackets.
+      </br>
+      </br>
+      The notation becomes as follows:
+      </br>
+    </p>
+    <ul>
+      <li>3 or {3} draws a triangle. 4 or {4} a square. 5 or {5} a pentagon etc.</li>
+      <li>6/2 or {6/2} gives a doubly wound hexagon (triangle), as according to Grünbaum.</li>
+      <li>2{3} produces 2 triangles in the shape of a davids star, as according to Coxeter.</li>
+    </ul>
+    </br>
+    <p>
+      To generalize, we get:
+      </br>
+      </br>
+      a{p/q}
+      </br>
+      </br>
+      where 'a' counts the number of repetitions of whatever is inside the brackets,
+      </br>
+      and every repetition is evenly rotated before they are overlapped.
+      </br>
+      'p' denotes the number of points in the polygon, and 'q' how these points are connected.
+      </br>
+      Try it out for yourself below:
+    </p>
+    </div>
     <div class='showcase'>
       <script src="schlafli/ChildAppender.js"></script>
       <script src="schlafli/sylvester.js"></script>
@@ -147,8 +239,11 @@
       		vColor = aVertexColor;
         }
       </script>
-      <aside class="showcaseMenu" id="GLmenu"></aside>
-      <div class="GLcontent showcaseContent"></div>
+      <aside class="showcaseMenu GLmenu">
+	<div class='showcaseMenuEntry GLinput'>
+	</div>
+      </aside>
+      <div class="showcaseContent GLcontent"></div>
       <script src="schlafli/WebGL.js"></script>
       <script src="schlafli/schlafli.js"></script>
     </div>
