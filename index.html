@@ -67,7 +67,7 @@
     background-color: rgba(33,38,45,0.5);
   }
   #pageTitle {
-    padding: 17%;
+    padding: 10%;
     height: 100%;
     font-size: 550%;
   }
@@ -88,7 +88,7 @@
           <a href='https://www.sololearn.com/certificates/CT-8ZUZ8A3O'>
 	    <div><h4>HTML</h4></div>
 	  </a>
-          <a href='https://www.sololearn.com/certificates/'>
+          <a href='https://www.sololearn.com/certificates/CC-IRFVAJWU'>
 	    <div><h4>CSS</h4></div>
 	  </a>
           <a href='https://www.sololearn.com/certificates/CT-GSVE44IH'>
@@ -110,8 +110,9 @@
     <h2>Silly 2D canvas stuff</h2>
     <div class='info'>
     <p>
-      These where made in my early days of learning JavaScript, mostly as a way for me to explore and develop my programming skills.</br>
-      You might recognize some of the ideas these projects build upon from Khanacademy.
+      These where made in my early days of learning JavaScript, mostly as a way for me to explore and develop my programming skills. You might recognize some of the ideas these projects build upon from Khanacademy.
+      </br>
+      Most of these are interactive. Try clicking around inside the canvas and see what happens.
     </p>
     </div>
     <div class='showcase'>
@@ -149,63 +150,19 @@
   <div class='PageSection'>
     <h2>WebGL Schläfli Illustrator</h2>
     <div class='info'>
-    <p>
-      <a href='https://en.wikipedia.org/wiki/Ludwig_Schläfli'>
-	Ludwig Schläfli
-      </a>
-      was a mathematician that laid the groundwork for what is today known as the
-      <a href='https://en.wikipedia.org/wiki/Schläfli_symbol'>
-	Schläfli symbols</a>,
-      </br>
-      a mathematical notation to represent all regular
-      <a href='https://en.wikipedia.org/wiki/List_of_regular_polytopes_and_compounds'>
-	 polytopes and tessellations</a>.
-    </p>
-    <p>
-      For now, my Illustrator only supports notations producing 
-      <a href='https://en.wikipedia.org/wiki/Regular_polygon'>
-        polygons</a>.
-      </br>
-      Higher dimension polytopes and tessellations can not currently be illustrated.
-    </p>
-    <p>
-      I have chosen a mixture of
-      <a href='https://en.wikipedia.org/wiki/Branko_Grünbaum'>
-	Grünbaums
-      </a>
-      and 
-      <a href='https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter'>
-        Coxeters
-      </a>
-      interpretations of the notation.
-      </br>
-      In addition, positive integers are also interpreted in the same way as if they where wrapped inside brackets.
-      </br>
-      </br>
-      The notation becomes as follows:
-      </br>
-    </p>
-    <ul>
-      <li>3 or {3} draws a triangle. 4 or {4} a square. 5 or {5} a pentagon etc.</li>
-      <li>6/2 or {6/2} gives a doubly wound hexagon (triangle), as according to Grünbaum.</li>
-      <li>2{3} produces 2 triangles in the shape of a davids star, as according to Coxeter.</li>
-    </ul>
-    </br>
-    <p>
-      To generalize, we get:
-      </br>
-      </br>
-      a{p/q}
-      </br>
-      </br>
-      where 'a' counts the number of repetitions of whatever is inside the brackets,
-      </br>
-      and every repetition is evenly rotated before they are overlapped.
-      </br>
-      'p' denotes the number of points in the polygon, and 'q' how these points are connected.
-      </br>
-      Try it out for yourself below:
-    </p>
+      <p>
+        This is a more complex demo.
+	</br>
+	The notation is as follows:
+	</br>
+	</br>
+	a{p/q}
+	</br>
+	</br>
+	Replace 'a', 'p', and 'q' with any positive number and input in the field below.
+	</br>
+	Input any number in the field below, and see what happens.
+      </p>
     </div>
     <div class='showcase'>
       <script src="schlafli/ChildAppender.js"></script>
@@ -246,6 +203,63 @@
       <div class="showcaseContent GLcontent"></div>
       <script src="schlafli/WebGL.js"></script>
       <script src="schlafli/schlafli.js"></script>
+    </div>
+    <div class='info'>
+    <p>
+      <a href='https://en.wikipedia.org/wiki/Ludwig_Schläfli'>
+	Ludwig Schläfli
+      </a>
+      was a mathematician that laid the groundwork for what is today known as the
+      <a href='https://en.wikipedia.org/wiki/Schläfli_symbol'>
+	Schläfli symbols</a>,
+      </br>
+      a mathematical notation to represent all regular
+      <a href='https://en.wikipedia.org/wiki/List_of_regular_polytopes_and_compounds'>
+	 polytopes and tessellations</a>.
+    </p>
+    <p>
+      For now, my Illustrator only supports notations producing 
+      <a href='https://en.wikipedia.org/wiki/Regular_polygon'>
+        polygons</a>.
+      </br>
+      Higher dimension polytopes and tessellations can not currently be illustrated.
+    </p>
+    <p>
+      I have chosen a mixture of
+      <a href='https://en.wikipedia.org/wiki/Branko_Grünbaum'>
+	Grünbaums
+      </a>
+      and 
+      <a href='https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter'>
+        Coxeters
+      </a>
+      interpretations of the notation.
+      </br>
+      In addition, positive integers are also interpreted in the same way as if they where wrapped inside brackets.
+      </br>
+      </br>
+      The notation becomes as follows:
+      </br>
+    </p>
+    <ul>
+      <li>{3} (or 3) draws a triangle. {4} (or 4) a square. {5} (or 5) a pentagon etc.</li>
+      <li>{6/2} (or 6/2) gives a doubly wound hexagon (triangle), as according to Grünbaum.</li>
+      <li>2{3} produces 2 triangles in the shape of a davids star, as according to Coxeter.</li>
+    </ul>
+    </br>
+    <p>
+      To generalize, we get:
+      </br>
+      </br>
+      a{p/q}
+      </br>
+      </br>
+      where 'a' counts the number of repetitions of whatever is inside the brackets,
+      </br>
+      and every repetition is evenly rotated before they are overlapped.
+      </br>
+      'p' denotes the number of points in the polygon, and 'q' how these points are connected.
+    </p>
     </div>
   </div>
 </body>
