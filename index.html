@@ -5,6 +5,8 @@
   <title>Joyje's</title>
   <link rel="stylesheet" href="showcase.css">
   <link rel="stylesheet" href="dropdown.css">
+  <link rel="stylesheet" href="cards.css">
+  <link rel="stylesheet" href="tabs.css">
 <style>
   body {
     margin: 0;
@@ -16,6 +18,10 @@
     background-color: #0d1117;
     font-family: system-ui, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     color: #f0f6fc;
+  }
+  h1 {
+    padding-top: 10%;
+    font-size: 550%;
   }
   h4 {
     margin: 7px;
@@ -67,12 +73,14 @@
   #user:hover {
     background-color: rgba(33,38,45,0.5);
   }
-  #pageTitle {
-    padding-top: 10%;
-    font-size: 550%;
-  }
   #CanvasMenu > .showcaseMenuEntry {
     height: 97px;
+  }
+  #profile {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
   }
 </style>
 </head>
@@ -99,11 +107,149 @@
       <a href='https://github.com/Joyje'>
         <div id='user'>
           <h4>Github</h4>
-          <img src='https://avatars.githubusercontent.com/u/15307480?v=4'>
+          <img src='https://avatars.githubusercontent.com/u/15307480?v=4' width='32' height='32'>
         </div>
       </a>
     </header>
-    <i><h1 id='pageTitle'>Joyje's</h1></i>
+    <div class='tabber'>
+
+      <div id='profile'>
+        <img src='https://avatars.githubusercontent.com/u/15307480?v=4' width='240' height='240'>
+        <h2>Joyje</h2>
+      </div>
+
+      <input type='radio' id='webTab' name='profile' checked>
+      <div class='tabContent'>
+	<div class='tabbedColumn1'>
+	  <p>
+	    2015 was the year I got serious about learning how to code.
+	    I started this journey on Khanacademy.org.
+	    </br>
+	    </br>
+	    2016 I obtained 2 certificates from Sololearn.com.
+	    </br>
+	    </br>
+	    For the sake of completion, in 2023 I decided to
+	    obtain the rest of the Sololearn certificates related to HTML, CSS and JavaScript.
+	  </p>
+	</div>
+	<div class='tabbedColumn2'>
+	  <h5>HTML Certificates</h5>
+	  <div class='splitCard'>
+	    <div class='firstHalf'>
+	    </div>
+	    <div class='secondHalf'>
+	    </div>
+	  </div>
+          <a href='https://www.sololearn.com/certificates/CT-8ZUZ8A3O'>
+	    <div class='fullCard'>
+	      <img src='https://api2.sololearn.com/v2/certificates/CT-8ZUZ8A3O/image/png'
+	      width='300' height='200'>
+	    </div>
+	  </a>
+	</div>
+	<div class='tabbedColumn3'>
+	  <h5>CSS Certificates</h5>
+	  <div class='splitCard'>
+	    <div class='firstHalf'>
+	    </div>
+	    <div class='secondHalf'>
+	    </div>
+	  </div>
+          <a href='https://www.sololearn.com/certificates/CC-IRFVAJWU'>
+	    <div class='fullCard'>
+	      <img src='https://api2.sololearn.com/v2/certificates/CC-IRFVAJWU/image/png'
+	      width='300' height='200'>
+	    </div>
+	  </a>
+	</div>
+	<div class='tabbedColumn4'>
+	  <h5>JS Certificates</h5>
+          <a href='https://www.sololearn.com/certificates/CC-IY1NAYII'>
+	    <div class='fullCard'>
+	      <img src='https://api2.sololearn.com/v2/certificates/CC-IY1NAYII/image/png'
+	      width='300' height='200'>
+	    </div>
+	  </a>
+	  <div class='splitCard'>
+	    <div class='firstHalf'>
+	    </div>
+	    <div class='secondHalf'>
+	    </div>
+	  </div>
+          <a href='https://www.sololearn.com/certificates/CT-GSVE44IH'>
+	    <div class='fullCard'>
+	      <img src='https://api2.sololearn.com/v2/certificates/CT-GSVE44IH/image/png'
+	      width='300' height='200'>
+	    </div>
+	  </a>
+	</div>
+      </div>
+
+      <input type='radio' id='bashTab' name='profile'>
+      <div class='tabContent'>
+	<div class='tabbedColumn1'>
+	  <p>
+	    Comming soon
+	  </p>
+	</div>
+	<div class='tabbedColumn2'>
+	</div>
+	<div class='tabbedColumn3'>
+	  <i><h1>N/A</h1></i>
+	</div>
+	<div class='tabbedColumn4'>
+	</div>
+      </div>
+
+      <input type='radio' id='workTab' name='profile'>
+      <div class='tabContent'>
+	<div class='tabbedColumn1'>
+	  <h5>Current occupation:</h5>
+	  <div class='fullCard'>
+	    <h3>2023 - </h3>
+	    <p>
+	      Available for hire.
+	    </p>
+	  </div>
+	</div>
+	<div class='tabbedColumn2'>
+	  <h5>Timeline</h5>
+	  <div class='splitCard'>
+	    <div class='firstHalf'>
+	      <h3>2018 - 2020</h3>
+	      <p>Teaching Math and JavaScript at:</p>
+	      <p>Frysusets grundskola</p>
+	    </div>
+	    <div class='secondHalf'>
+	    </div>
+	  </div>
+	</div>
+	<div class='tabbedColumn3'>
+	</div>
+	<div class='tabbedColumn4'>
+	</div>
+      </div>
+
+      <div class='tabMenu'>
+	<label for='webTab'>
+          <div class='tabMenuEntry'>
+	    <h3>Web</h3>
+          </div>
+	</label>
+        <label for='bashTab'>
+          <div class='tabMenuEntry'>
+	    <h3>Linux/Bash</h3>
+          </div>
+        </label>
+	<label for='workTab'>
+          <div class='tabMenuEntry'>
+	    <h3>Career</h3>
+          </div>
+	</label>
+      </div>
+
+    </div>
   </div>
 
   <div class='PageSection'>
@@ -248,7 +394,6 @@
       <li>{6/2} (or 6/2) gives a doubly wound hexagon (triangle), as according to Grünbaum.</li>
       <li>2{3} produces 2 triangles in the shape of a davids star, as according to Coxeter.</li>
     </ul>
-    </br>
     <p>
       When generalizing, we get:
       </br>
@@ -256,11 +401,13 @@
       a{p/q}
       </br>
       </br>
-      where 'a' counts the number of repetitions of whatever is inside the brackets,
+      'a' is the number of repetitions of whatever is inside the brackets.
       </br>
-      and every repetition is evenly rotated before they are overlapped.
+      Repetitions are evenly rotated before they are overlapped.
       </br>
-      'p' denotes the number of points in the polygon, and 'q' how these points are connected.
+      'p' is the number of points along the polygons edge,
+      </br>
+      and 'q' tells how these points are connected.
     </p>
     </div>
   </div>
