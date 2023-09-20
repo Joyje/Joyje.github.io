@@ -33,9 +33,6 @@
   border-bottom: 1px solid #60666d;
 }
 .tabContent {
-  display: none;
-}
-.tabber [type='radio']:checked + .tabContent {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
@@ -44,6 +41,13 @@
   justify-items: center;
   grid-template-columns: 320px 320px 320px 320px;  
   grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px; 
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 400ms linear;
+}
+.tabber [type='radio']:checked + .tabContent {
+  visibility: visible;
+  opacity: 1;
 }
 .tabbedColumn1 {
   margin: 0px;

@@ -5,6 +5,7 @@
   border: 1px solid #30363d;
   border-radius: 3%;
   background-color: rgba(13, 17, 23, 0.5);
+  transition: transform 100ms linear;
   overflow: hidden;
 }
 .splitCard {
