@@ -54,7 +54,7 @@
   padding 0px;
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-row-start: 3;
+  grid-row-start: 4;
   grid-row-end: 10;
 }
 .tabbedColumn2, .tabbedColumn3, .tabbedColumn4 {
