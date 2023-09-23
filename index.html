@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Joyje's</title>
   <link rel="stylesheet" href="showcase.css">
-  <link rel="stylesheet" href="dropdown.css">
+  <link rel="stylesheet" href="scrollbar.css">
   <link rel="stylesheet" href="cards.css">
   <link rel="stylesheet" href="tabs.css">
 <style>
@@ -19,19 +19,16 @@
     font-family: system-ui, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     color: #f0f6fc;
   }
-  h1 {
-    padding-top: 10%;
-    font-size: 550%;
-  }
   h4 {
     margin: 7px;
-    float: left;
+    float: inherit;
   }
   a {
     color: #1f6feb;
+    text-decoration: none;
   }
-  header a {
-    color: #f0f6fc;
+  a:hover {
+    text-decoration: underline;
   }
   ul {
     margin: auto;
@@ -42,8 +39,40 @@
     margin: 3px;
     padding: 3px;
   }
-  .pageSection {
-    margin-bottom: 300px;
+  header {
+    height: 50px;
+    display: flex;
+    background-color: rgba(13, 17, 23, 0.5);
+    border-bottom: 1px solid #30363d;
+  }
+  header a {
+    color: #f0f6fc;
+  }
+  header > div {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    flex: 1;
+  }
+  #source {
+    margin: 0px;
+    padding: 9px;
+    width: 160px;
+    height: 32px;
+    float: left;
+  }
+  #source img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    float: left;
+  }
+  #source:hover {
+    background-color: rgba(33,38,45,0.5);
+  }
+  .mainSection {
+    margin: 80px auto 200px auto;
+    padding: 25px 0px 0px 0px;
     width: 100%;
     min-height: 50vh;
   }
@@ -51,30 +80,6 @@
     margin: auto;
     padding: 0;
     width: 900px;
-  }
-  .topBar {
-    height: 50px;
-    background-color: rgba(13, 17, 23, 0.5);
-    border-bottom: 1px solid #30363d;
-  }
-  #user {
-    margin: 0px;
-    padding: 9px;
-    width: 115px;
-    height: 32px;
-    float: right;
-  }
-  #user img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    float: right;
-  }
-  #user:hover {
-    background-color: rgba(33,38,45,0.5);
-  }
-  #CanvasMenu > .showcaseMenuEntry {
-    height: 97px;
   }
   #profile {
     width: 320px;
@@ -95,12 +100,6 @@
     list-style-position: inside;
     font-size: 14px;
   }
-  #profile a {
-    text-decoration: none;
-  }
-  #profile a:hover {
-    text-decoration: underline;
-  }
   #profile #KA {
     list-style-image: url('https://imgs.search.brave.com/5Gc4m4Rck-8NkoTVGgsbWLzfGiCeovG2jibbfWV5Tgg/rs:fit:32:32:1/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmQ3ZTdiNDM1/MTRlY2Y4ZGRjNjgx/MDVjY2RiMTEyMmQ1/NTBhYTg3NDdkNDI2/ZDMzZjkxODM2N2Ez/ZTQwY2UyYi93d3cu/a2hhbmFjYWRlbXku/b3JnLw');
   }
@@ -113,378 +112,414 @@
   #profile #GH {
     list-style-image: url('https://imgs.search.brave.com/v8685zI4XInM0zxlNI2s7oE_2Sb-EL7lAy81WXbkQD8/rs:fit:32:32:1/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw');
   }
+  #CanvasMenu > .showcaseMenuEntry {
+    height: 97px;
+  }
 </style>
 </head>
 
 <body align="center">
-  <div class='pageSection' id='ps1'>
-    <header class='topBar'>
-      <div class='dropdown'>
-        <div class='dropdownToggle'>
-          <h4>Showcase</h4>
-        </div>
-        <aside class='dropdownContent'>
-          <a href='#ps1'>
-	    <div><h4>Profile</h4></div>
-	  </a>
-          <a href='#ps2'>
-	    <div><h4>2D Canvas</h4></div>
-	  </a>
-          <a href='#ps3'>
-	    <div><h4>WebGL</h4></div>
-	  </a>
-        </aside>
-      </div>
-      <a href='https://github.com/Joyje'>
-        <div id='user'>
-          <h4>Github</h4>
+
+  <header>
+    <div>
+      <a href='https://github.com/Joyje/Joyje.github.io'>
+        <div id='source'>
           <img src='https://avatars.githubusercontent.com/u/15307480?v=4' width='32' height='32'>
+          <h4>GitHub Repo</h4>
         </div>
       </a>
-    </header>
-    <div class='tabber'>
-
-      <div id='profile'>
-        <img src='https://avatars.githubusercontent.com/u/15307480?v=4' width='240' height='240'>
-        <h2>Joyje</h2>
-	<div style='display: flex'>
-	  <div>
-	    <ul>
-	      <a href="http://www.khanacademy.org/profile/Joyje">
-                <li id='KA'>KhanAcademy</li>
-	      </a>
-	      <a href="https://www.sololearn.com/profile/344718">
-                <li id='SL'>Sololearn</li>
-	      </a>
-	    </ul>
-	  </div>
-	  <div>
-	    <ul>
-	      <a href="https://stackoverflow.com/users/5916385/joel-sahlin">
-                <li id='SO'>StackOverflow</li>
-	      </a>
-	      <a href="https://github.com/Joyje">
-                <li id='GH'>Github</li>
-	      </a>
-	    </ul>
-	  </div>
-	</div>
-      </div>
-
-      <div class='tabMenu'>
-	<label for='webTab'>
-          <div class='tabMenuEntry'>
-	    <h3>Web</h3>
-          </div>
-	</label>
-        <label for='bashTab'>
-          <div class='tabMenuEntry'>
-	    <h3>Linux/Bash</h3>
-          </div>
-        </label>
-	<label for='workTab'>
-          <div class='tabMenuEntry'>
-	    <h3>Career</h3>
-          </div>
-	</label>
-      </div>
-
-      <input type='radio' id='webTab' name='profile' checked>
-      <div class='tabContent'>
-	<div class='tabbedColumn1'>
-	  <p>
-	    2015 was the year I got serious about learning how to code.
-	    I started this journey on Khanacademy.org.
-	    <br>
-	    <br>
-	    2016 I obtained 2 certificates from Sololearn.com.
-	    <br>
-	    <br>
-	    For the sake of completion, in 2023 I decided to
-	    obtain the rest of the Sololearn certificates related to HTML, CSS and JavaScript.
-	  </p>
-	</div>
-	<div class='tabbedColumn2'>
-	  <h5>HTML Certificates</h5>
-	  <a href='https://www.sololearn.com/certificates/CC-Y0JNZEZO'>
-	    <div class='fullCard'>
-	      <img src='https://api2.sololearn.com/v2/certificates/CC-Y0JNZEZO/image/png'
-	      width='300' height='200'>
-	    </div>
-	  </a>
-          <a href='https://www.sololearn.com/certificates/CT-8ZUZ8A3O'>
-	    <div class='fullCard'>
-	      <img src='https://api2.sololearn.com/v2/certificates/CT-8ZUZ8A3O/image/png'
-	      width='300' height='200'>
-	    </div>
-	  </a>
-	</div>
-	<div class='tabbedColumn3'>
-	  <h5>CSS Certificates</h5>
-	  <a href='https://www.sololearn.com/certificates/CC-U18Y1UMM'>
-	    <div class='fullCard'>
-	      <img src='https://api2.sololearn.com/v2/certificates/CC-U18Y1UMM/image/png'
-	      width='300' height='200'>
-	    </div>
-	  </a>
-          <a href='https://www.sololearn.com/certificates/CC-IRFVAJWU'>
-	    <div class='fullCard'>
-	      <img src='https://api2.sololearn.com/v2/certificates/CC-IRFVAJWU/image/png'
-	      width='300' height='200'>
-	    </div>
-	  </a>
-	</div>
-	<div class='tabbedColumn4'>
-	  <h5>JS Certificates</h5>
-          <a href='https://www.sololearn.com/certificates/CC-IY1NAYII'>
-	    <div class='fullCard'>
-	      <img src='https://api2.sololearn.com/v2/certificates/CC-IY1NAYII/image/png'
-	      width='300' height='200'>
-	    </div>
-	  </a>
-          <a href='https://www.sololearn.com/certificates/CT-GSVE44IH'>
-	    <div class='fullCard'>
-	      <img src='https://api2.sololearn.com/v2/certificates/CT-GSVE44IH/image/png'
-	      width='300' height='200'>
-	    </div>
-	  </a>
-	</div>
-      </div>
-
-      <input type='radio' id='bashTab' name='profile'>
-      <div class='tabContent'>
-	<div class='tabbedColumn1'>
-	  <p>
-	    Comming soon
-	  </p>
-	</div>
-	<div class='tabbedColumn2'>
-	</div>
-	<div class='tabbedColumn3'>
-	  <i><h1>N/A</h1></i>
-	</div>
-	<div class='tabbedColumn4'>
-	</div>
-      </div>
-
-      <input type='radio' id='workTab' name='profile'>
-      <div class='tabContent'>
-	<div class='tabbedColumn1'>
-	  <h5>Current occupation:</h5>
-	  <div class='fullCard'>
-	    <h3>2023 - </h3>
-	    <p>
-	      Available for hire.
-	    </p>
-	  </div>
-	</div>
-	<div class='tabbedColumn2'>
-	  <h5>Timeline</h5>
-	  <div class='splitCard'>
-	    <div class='firstHalf'>
-	      <h3>2018 - 2020</h3>
-	      <p>Teaching Math and JavaScript at:</p>
-	      <p>Frysusets grundskola</p>
-	    </div>
-	    <div class='secondHalf'>
-	    </div>
-	  </div>
-	</div>
-	<div class='tabbedColumn3'>
-	</div>
-	<div class='tabbedColumn4'>
-	</div>
-      </div>
-
     </div>
-  </div>
-
-  <div class='pageSection' id='ps2'>
-    <h2>Silly 2D canvas stuff</h2>
-    <div class='info'>
-    <p>
-      These where made in my early days of learning JavaScript, mostly as a way for me to explore and develop my
-      <br>
-      programming skills. You might recognize some of the ideas these projects build upon from Khanacademy.
-      <br>
-      Most of these are interactive. Try clicking around inside the canvas and see what happens.
-    </p>
+    <div>
     </div>
-    <div class='showcase'>
-      <aside class='showcaseMenu' id='CanvasMenu'>
-      	<div class='showcaseMenuEntry' onclick='var canvas = document.getElementById("CanvasContent");
-                                                 var showLoad = document.createElement("p");
-	                                         showLoad.innerHTML = "Loading<br>...";
-	                                         showLoad.style.position = "absolute";
-	                                         showLoad.style.margin = "150px 180px";
-	                                         showLoad.style.zIndex = "0";
-                                                 var silly = document.createElement("iframe");
-                                                 silly.src = "KhanAcademy/ShootingStar.html"
-	                                         silly.style.position = "relative";
-	                                         silly.style.zIndex = "1";
-                                                 canvas.replaceChildren(showLoad, silly);'>
-          <h3> Shooting Star </h3>
-      	</div>
-      	<div class='showcaseMenuEntry' onclick='var canvas = document.getElementById("CanvasContent");
-                                                 var showLoad = document.createElement("p");
-	                                         showLoad.innerHTML = "Loading<br>...";
-	                                         showLoad.style.position = "absolute";
-	                                         showLoad.style.margin = "150px 180px";
-	                                         showLoad.style.zIndex = "0";
-                                                 var silly = document.createElement("iframe");
-                                                 silly.src = "KhanAcademy/MakeItRain.html"
-	                                         silly.style.position = "relative";
-	                                         silly.style.zIndex = "1";
-                                                 canvas.replaceChildren(showLoad, silly);'>
-          <h3> Make it Rain </h3>
-      	</div>
-      	<div class='showcaseMenuEntry' onclick='var canvas = document.getElementById("CanvasContent");
-                                                 var showLoad = document.createElement("p");
-	                                         showLoad.innerHTML = "Loading<br>...";
-	                                         showLoad.style.position = "absolute";
-	                                         showLoad.style.margin = "150px 180px";
-	                                         showLoad.style.zIndex = "0";
-                                                 var silly = document.createElement("iframe");
-                                                 silly.src = "KhanAcademy/Piggyface.html"
-	                                         silly.style.position = "relative";
-	                                         silly.style.zIndex = "1";
-                                                 canvas.replaceChildren(showLoad, silly);'>
-          <h3> Piggyface </h3>
-      	</div>
-      	<div class='showcaseMenuEntry' onclick='var canvas = document.getElementById("CanvasContent");
-                                                 var showLoad = document.createElement("p");
-	                                         showLoad.innerHTML = "Loading<br>...";
-	                                         showLoad.style.position = "absolute";
-	                                         showLoad.style.margin = "150px 180px";
-	                                         showLoad.style.zIndex = "0";
-                                                 var silly = document.createElement("iframe");
-                                                 silly.src = "KhanAcademy/FishTank.html"
-	                                         silly.style.position = "relative";
-	                                         silly.style.zIndex = "1";
-                                                 canvas.replaceChildren(showLoad, silly);'>
-          <h3> Fish Tank </h3>
-      	</div>
-      </aside>
-      <div class='showcaseContent' id='CanvasContent'>
+    <div>
+      <label for='sb'>
+        <div id='scrollToggle'>
+          <h4>ScrollNav</h4>
+        </div>
+      </label>
+    </div>
+  </header>
+
+  <aside id='scroll'>
+    <input type='checkbox' id='sb'>
+    <nav id='scrollNav'>
+      <a href='#ms1'>
+        <div id='sbms1'>
+	  <h6>P<br><br>r<br><br>o<br><br>f<br><br>i<br><br>l<br><br>e</h6>
+	</div>
+      </a>
+      <a href='#ms2'>
+        <div id='sbms2'>
+	  <h6>2<br><br>D<br><br><br>C<br><br>a<br><br>n<br><br>v<br><br>a<br><br>s</h6>
+	</div>
+      </a>
+      <a href='#ms3'>
+        <div id='sbms3'>
+	  <h6>W<br><br>e<br><br>b<br><br>G<br><br>L<br></h6>
+	</div>
+      </a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class='mainSection' id='ms1'>
+      <div class='tabber'>
+  
+        <div id='profile'>
+          <img src='https://avatars.githubusercontent.com/u/15307480?v=4' width='240' height='240'>
+          <h2>Joyje</h2>
+  	<div style='display: flex'>
+  	  <div>
+  	    <ul>
+  	      <a href="http://www.khanacademy.org/profile/Joyje">
+                  <li id='KA'>KhanAcademy</li>
+  	      </a>
+  	      <a href="https://www.sololearn.com/profile/344718">
+                  <li id='SL'>SoloLearn</li>
+  	      </a>
+  	    </ul>
+  	  </div>
+  	  <div>
+  	    <ul>
+  	      <a href="https://stackoverflow.com/users/5916385/joel-sahlin">
+                  <li id='SO'>StackOverflow</li>
+  	      </a>
+  	      <a href="https://github.com/Joyje">
+                  <li id='GH'>GitHub</li>
+  	      </a>
+  	    </ul>
+  	  </div>
+  	</div>
+        </div>
+  
+        <div class='tabMenu'>
+  	<label for='webTab'>
+            <div class='tabMenuEntry'>
+  	    <h3>Web</h3>
+            </div>
+  	</label>
+          <label for='bashTab'>
+            <div class='tabMenuEntry'>
+  	    <h3>Linux/Bash</h3>
+            </div>
+          </label>
+  	<label for='workTab'>
+            <div class='tabMenuEntry'>
+  	    <h3>Career</h3>
+            </div>
+  	</label>
+        </div>
+  
+        <input type='radio' id='webTab' name='profile' checked>
+        <div class='tabContent'>
+  	<div class='tabbedColumn1'>
+  	  <p>
+  	    2015 was the year I got serious about learning how to code.
+  	    I started my journey on KhanAcademy.org.
+  	    <br>
+  	    <br>
+  	    2016 I obtained 2 certificates from SoloLearn.com.
+  	    <br>
+  	    <br>
+  	    For the sake of completion, in 2023 I decided to
+  	    obtain the rest of the SoloLearn certificates related to HTML, CSS and JavaScript.
+  	  </p>
+  	</div>
+  	<div class='tabbedColumn2'>
+  	  <h5>HTML Certificates</h5>
+  	  <a href='https://www.sololearn.com/certificates/CC-Y0JNZEZO'>
+  	    <div class='fullCard'>
+  	      <img src='https://api2.sololearn.com/v2/certificates/CC-Y0JNZEZO/image/png'
+  	      width='300' height='200'>
+  	    </div>
+  	  </a>
+            <a href='https://www.sololearn.com/certificates/CT-8ZUZ8A3O'>
+  	    <div class='fullCard'>
+  	      <img src='https://api2.sololearn.com/v2/certificates/CT-8ZUZ8A3O/image/png'
+  	      width='300' height='200'>
+  	    </div>
+  	  </a>
+  	</div>
+  	<div class='tabbedColumn3'>
+  	  <h5>CSS Certificates</h5>
+  	  <a href='https://www.sololearn.com/certificates/CC-U18Y1UMM'>
+  	    <div class='fullCard'>
+  	      <img src='https://api2.sololearn.com/v2/certificates/CC-U18Y1UMM/image/png'
+  	      width='300' height='200'>
+  	    </div>
+  	  </a>
+            <a href='https://www.sololearn.com/certificates/CC-IRFVAJWU'>
+  	    <div class='fullCard'>
+  	      <img src='https://api2.sololearn.com/v2/certificates/CC-IRFVAJWU/image/png'
+  	      width='300' height='200'>
+  	    </div>
+  	  </a>
+  	</div>
+  	<div class='tabbedColumn4'>
+  	  <h5>JS Certificates</h5>
+            <a href='https://www.sololearn.com/certificates/CC-IY1NAYII'>
+  	    <div class='fullCard'>
+  	      <img src='https://api2.sololearn.com/v2/certificates/CC-IY1NAYII/image/png'
+  	      width='300' height='200'>
+  	    </div>
+  	  </a>
+            <a href='https://www.sololearn.com/certificates/CT-GSVE44IH'>
+  	    <div class='fullCard'>
+  	      <img src='https://api2.sololearn.com/v2/certificates/CT-GSVE44IH/image/png'
+  	      width='300' height='200'>
+  	    </div>
+  	  </a>
+            <a href='https://www.sololearn.com/certificates/CC-AXFYRCTA'>
+  	    <div class='fullCard'>
+  	      <img src='https://api2.sololearn.com/v2/certificates/CC-AXFYRCTA/image/png'
+  	      width='300' height='200'>
+  	    </div>
+  	  </a>
+  	</div>
+        </div>
+  
+        <input type='radio' id='bashTab' name='profile'>
+        <div class='tabContent'>
+  	<div class='tabbedColumn1'>
+  	  <p>
+  	    Comming soon
+  	  </p>
+  	</div>
+  	<div class='tabbedColumn2'>
+  	</div>
+  	<div class='tabbedColumn3'>
+  	  <i><h1>N/A</h1></i>
+  	</div>
+  	<div class='tabbedColumn4'>
+  	</div>
+        </div>
+  
+        <input type='radio' id='workTab' name='profile'>
+        <div class='tabContent'>
+  	<div class='tabbedColumn1'>
+  	  <h5>Current occupation:</h5>
+  	  <div class='fullCard'>
+  	    <h3>2023 - </h3>
+  	    <p>
+  	      Available for hire.
+  	    </p>
+  	  </div>
+  	</div>
+  	<div class='tabbedColumn2'>
+  	  <h5>Timeline</h5>
+  	  <div class='splitCard'>
+  	    <div class='firstHalf'>
+  	      <h3>2018 - 2020</h3>
+  	      <p>Teaching Math and JavaScript at:</p>
+  	      <p>Frysusets grundskola</p>
+  	    </div>
+  	    <div class='secondHalf'>
+  	    </div>
+  	  </div>
+  	</div>
+  	<div class='tabbedColumn3'>
+  	</div>
+  	<div class='tabbedColumn4'>
+  	</div>
+        </div>
+  
       </div>
     </div>
-  </div>
-
-  <div class='pageSection' id='ps3'>
-    <h2>WebGL Schläfli Illustrator</h2>
-    <div class='info'>
+  
+    <div class='mainSection' id='ms2'>
+      <h2>Silly 2D canvas stuff</h2>
+      <div class='info'>
       <p>
-        This is a more complex demo.
-	<br>
-	The notation is as follows:
-	<br>
-	<br>
-	a{p/q}
-	<br>
-	<br>
-	Replace 'a', 'p', and 'q' with any positive number,
-	<br>
-	input it in the white field below and hit enter.
+        These where made in my early days of learning JavaScript, mostly as a way for me to explore and develop my
+        <br>
+        programming skills. You might recognize some of the ideas these projects build upon from Khanacademy.
+        <br>
+        Most of these are interactive. Try clicking around inside the canvas and see what happens.
       </p>
+      </div>
+      <div class='showcase'>
+        <aside class='showcaseMenu' id='CanvasMenu'>
+        	<div class='showcaseMenuEntry' onclick='
+		                               var canvas = document.getElementById("CanvasContent");
+                                               var showLoad = document.createElement("p");
+  	                                       showLoad.innerHTML = "Loading<br>...";
+  	                                       showLoad.style.position = "absolute";
+  	                                       showLoad.style.margin = "170px";
+  	                                       showLoad.style.zIndex = "0";
+                                               var silly = document.createElement("iframe");
+                                               silly.src = "KhanAcademy/ShootingStar.html"
+  	                                       silly.style.position = "relative";
+  	                                       silly.style.zIndex = "1";
+                                               canvas.replaceChildren(showLoad, silly);
+					       '>
+            <h3> Shooting Star </h3>
+        	</div>
+        	<div class='showcaseMenuEntry' onclick='
+		                               var canvas = document.getElementById("CanvasContent");
+                                               var showLoad = document.createElement("p");
+  	                                       showLoad.innerHTML = "Loading<br>...";
+  	                                       showLoad.style.position = "absolute";
+  	                                       showLoad.style.margin = "170px";
+  	                                       showLoad.style.zIndex = "0";
+                                               var silly = document.createElement("iframe");
+                                               silly.src = "KhanAcademy/MakeItRain.html"
+  	                                       silly.style.position = "relative";
+  	                                       silly.style.zIndex = "1";
+                                               canvas.replaceChildren(showLoad, silly);
+					       '>
+            <h3> Make it Rain </h3>
+        	</div>
+        	<div class='showcaseMenuEntry' onclick='
+		                               var canvas = document.getElementById("CanvasContent");
+                                               var showLoad = document.createElement("p");
+  	                                       showLoad.innerHTML = "Loading<br>...";
+  	                                       showLoad.style.position = "absolute";
+  	                                       showLoad.style.margin = "170px";
+  	                                       showLoad.style.zIndex = "0";
+                                               var silly = document.createElement("iframe");
+                                               silly.src = "KhanAcademy/Piggyface.html"
+  	                                       silly.style.position = "relative";
+  	                                       silly.style.zIndex = "1";
+                                               canvas.replaceChildren(showLoad, silly);
+					       '>
+            <h3> Piggyface </h3>
+        	</div>
+        	<div class='showcaseMenuEntry' onclick='
+		                               var canvas = document.getElementById("CanvasContent");
+                                               var showLoad = document.createElement("p");
+  	                                       showLoad.innerHTML = "Loading<br>...";
+  	                                       showLoad.style.position = "absolute";
+  	                                       showLoad.style.margin = "170px";
+  	                                       showLoad.style.zIndex = "0";
+                                               var silly = document.createElement("iframe");
+                                               silly.src = "KhanAcademy/FishTank.html"
+  	                                       silly.style.position = "relative";
+  	                                       silly.style.zIndex = "1";
+                                               canvas.replaceChildren(showLoad, silly);'>
+            <h3> Fish Tank </h3>
+        	</div>
+        </aside>
+        <div class='showcaseContent' id='CanvasContent'>
+        </div>
+      </div>
     </div>
-    <div class='showcase'>
-      <script src="schlafli/ChildAppender.js"></script>
-      <script src="schlafli/sylvester.js"></script>
-      <script src="schlafli/glUtils.js"></script>
-      <script src="schlafli/Matrix.js"></script>
-      <script src="schlafli/Shaders.js"></script>
-      <script src="schlafli/Buffers.js"></script>
+  
+    <div class='mainSection' id='ms3'>
+      <h2>WebGL Schläfli Illustrator</h2>
+      <div class='info'>
+        <p>
+          This is a more complex demo.
+  	<br>
+  	The notation is as follows:
+  	<br>
+  	<br>
+  	a{p/q}
+  	<br>
+  	<br>
+  	Replace 'a', 'p', and 'q' with any positive number,
+  	<br>
+  	input it in the white field below and hit enter.
+        </p>
+      </div>
+      <div class='showcase'>
+        <script src="schlafli/ChildAppender.js"></script>
+        <script src="schlafli/sylvester.js"></script>
+        <script src="schlafli/glUtils.js"></script>
+        <script src="schlafli/Matrix.js"></script>
+        <script src="schlafli/Shaders.js"></script>
+        <script src="schlafli/Buffers.js"></script>
+  
+        <!--Fragment shader-->
+        <script id="shader-fs" type="x-shader/x-fragment">
+          varying lowp vec4 vColor;
+  
+          void main(void) {
+            gl_FragColor = vColor;
+          }
+        </script>
+  
+        <!--Vertex shader-->
+        <script id="shader-vs" type="x-shader/x-vertex">
+          attribute vec3 aVertexPosition;
+          attribute vec4 aVertexColor;
 
-      <!--Fragment shader-->
-      <script id="shader-fs" type="x-shader/x-fragment">
-      	varying lowp vec4 vColor;
+          uniform mat4 uMVMatrix;
+          uniform mat4 uPMatrix;
 
-      	void main(void) {
-      		gl_FragColor = vColor;
-      	}
-      </script>
+          varying lowp vec4 vColor;
 
-      <!--Vertex shader-->
-      <script id="shader-vs" type="x-shader/x-vertex">
-      	attribute vec3 aVertexPosition;
-      	attribute vec4 aVertexColor;
-
-      	uniform mat4 uMVMatrix;
-      	uniform mat4 uPMatrix;
-
-        varying lowp vec4 vColor;
-
-      	void main(void) {
-      		gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-      		vColor = aVertexColor;
-        }
-      </script>
-      <aside class="showcaseMenu GLmenu">
-	<div class='showcaseMenuEntry GLinput'>
-	</div>
-      </aside>
-      <div class="showcaseContent GLcontent"></div>
-      <script src="schlafli/WebGL.js"></script>
-      <script src="schlafli/schlafli.js"></script>
+          void main(void) {
+            gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+       	    vColor = aVertexColor;
+          }
+        </script>
+        <aside class="showcaseMenu GLmenu">
+  	<div class='showcaseMenuEntry GLinput'>
+  	</div>
+        </aside>
+        <div class="showcaseContent GLcontent"></div>
+        <script src="schlafli/WebGL.js"></script>
+        <script src="schlafli/schlafli.js"></script>
+      </div>
+      <div class='info'>
+      <p>
+        <a href='https://en.wikipedia.org/wiki/Ludwig_Schläfli'>
+  	Ludwig Schläfli
+        </a>
+        was a mathematician that laid the groundwork for what is today known as the
+        <a href='https://en.wikipedia.org/wiki/Schläfli_symbol'>
+  	Schläfli symbols</a>,
+        <br>
+        a mathematical notation to represent all regular
+        <a href='https://en.wikipedia.org/wiki/List_of_regular_polytopes_and_compounds'>
+  	 polytopes and tessellations</a>.
+      </p>
+      <p>
+        For now, my Illustrator only supports notations producing 
+        <a href='https://en.wikipedia.org/wiki/Regular_polygon'>
+          polygons</a>.
+        <br>
+        Higher dimension polytopes and tessellations can not currently be illustrated.
+      </p>
+      <p>
+        I have chosen a mixture of
+        <a href='https://en.wikipedia.org/wiki/Branko_Grünbaum'>
+  	Grünbaums
+        </a>
+        and 
+        <a href='https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter'>
+          Coxeters
+        </a>
+        interpretations of the notation.
+        <br>
+        In addition, positive integers are also interpreted in the same way as if they where wrapped inside brackets.
+        <br>
+        <br>
+        The notation becomes as follows:
+        <br>
+      </p>
+      <ul>
+        <li>{3} (or 3) draws a triangle. {4} (or 4) a square. {5} (or 5) a pentagon etc.</li>
+        <li>{6/2} (or 6/2) gives a doubly wound hexagon (triangle), as according to Grünbaum.</li>
+        <li>2{3} produces 2 triangles in the shape of a davids star, as according to Coxeter.</li>
+      </ul>
+      <p>
+        When generalizing, we get:
+        <br>
+        <br>
+        a{p/q}
+        <br>
+        <br>
+        'a' is the number of repetitions of whatever is inside the brackets.
+        <br>
+        Repetitions are evenly rotated before they are overlapped.
+        <br>
+        'p' is the number of points along the polygons edge,
+        <br>
+        and 'q' tells how these points are connected.
+      </p>
+      </div>
     </div>
-    <div class='info'>
-    <p>
-      <a href='https://en.wikipedia.org/wiki/Ludwig_Schläfli'>
-	Ludwig Schläfli
-      </a>
-      was a mathematician that laid the groundwork for what is today known as the
-      <a href='https://en.wikipedia.org/wiki/Schläfli_symbol'>
-	Schläfli symbols</a>,
-      <br>
-      a mathematical notation to represent all regular
-      <a href='https://en.wikipedia.org/wiki/List_of_regular_polytopes_and_compounds'>
-	 polytopes and tessellations</a>.
-    </p>
-    <p>
-      For now, my Illustrator only supports notations producing 
-      <a href='https://en.wikipedia.org/wiki/Regular_polygon'>
-        polygons</a>.
-      <br>
-      Higher dimension polytopes and tessellations can not currently be illustrated.
-    </p>
-    <p>
-      I have chosen a mixture of
-      <a href='https://en.wikipedia.org/wiki/Branko_Grünbaum'>
-	Grünbaums
-      </a>
-      and 
-      <a href='https://en.wikipedia.org/wiki/Harold_Scott_MacDonald_Coxeter'>
-        Coxeters
-      </a>
-      interpretations of the notation.
-      <br>
-      In addition, positive integers are also interpreted in the same way as if they where wrapped inside brackets.
-      <br>
-      <br>
-      The notation becomes as follows:
-      <br>
-    </p>
-    <ul>
-      <li>{3} (or 3) draws a triangle. {4} (or 4) a square. {5} (or 5) a pentagon etc.</li>
-      <li>{6/2} (or 6/2) gives a doubly wound hexagon (triangle), as according to Grünbaum.</li>
-      <li>2{3} produces 2 triangles in the shape of a davids star, as according to Coxeter.</li>
-    </ul>
-    <p>
-      When generalizing, we get:
-      <br>
-      <br>
-      a{p/q}
-      <br>
-      <br>
-      'a' is the number of repetitions of whatever is inside the brackets.
-      <br>
-      Repetitions are evenly rotated before they are overlapped.
-      <br>
-      'p' is the number of points along the polygons edge,
-      <br>
-      and 'q' tells how these points are connected.
-    </p>
-    </div>
-  </div>
+  </main>
 </body>
 </html>

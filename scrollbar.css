@@ -1,0 +1,66 @@
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: #30363d;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #60666d;
+}
+::-webkit-scrollbar-track {
+  display: none;
+}
+::-webkit-scrollbar-track-piece {
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+#scrollToggle {
+  padding: 9px 32px;
+  max-height: 100%;
+  box-sizing: border-box;
+  float: right;
+}
+#scrollToggle:hover {
+  background-color: rgba(33,38,45,0.5);
+  cursor: pointer;
+}
+#scroll {
+  width: 32px;
+  height: 100%;
+  position: fixed;
+  top: 15px;
+  right: 0px;
+}
+#scrollNav {
+  display: none;
+}
+#scrollNav div {
+  width: 100%;
+  border-bottom: 1px solid #30363d;
+  box-sizing: border-box;
+}
+#scrollNav h6{
+  margin: auto;
+}
+#scrollNav #sbms1 {
+  padding: 7vh 0px;
+  min-height: 33.5vh;
+  max-height: 33.5vh;
+  border-top: 1px solid #30363d;
+}
+#scrollNav #sbms2 {
+  padding: 0.5vh 0px;
+  min-height: 22.5vh;
+  max-height: 22.5vh;
+}
+#scrollNav #sbms3 {
+  padding: 13vh 0px;
+  min-height: 40.5vh;
+  max-height: 40.5vh;
+}
+#scroll [type='checkbox']:checked + #scrollNav {
+  display: block;
+}

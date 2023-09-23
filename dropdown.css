@@ -1,23 +1,21 @@
 .dropdown {
-  margin: 0px;
-  padding: 0px;
-  width: 115px;
-  height: 152px;
-  float: left;
+  width: 100%;
+  height: 100%;
   position: relative;
+}
+.dropdown a {
+  min-width: 100%;
   display: inline-block;
 }
 .dropdownToggle {
-  margin: 0px;
   padding: 9px;
-  width: 115px;
-  height: 32px;
-  float: left;
+  box-sizing: border-box;
+}
+.dropdown:hover .dropdownToggle {
+  background-color: rgba(33,38,45,0.5);
 }
 .dropdownContent {
-  margin-top: 50px;
-  width: 115px;
-  height: 102px;
+  min-width: 100%;
   display: none;
   position: absolute;
   background-color: rgba(13, 17, 23, 0.5);
@@ -25,13 +23,9 @@
 .dropdown:hover .dropdownContent {
   display: block;
 }
-.dropdown:hover .dropdownToggle {
-  background-color: rgba(33,38,45,0.5);
-}
 .dropdownContent div {
-  width: 100%;
-  height: 32px;
-  clear: left;
+  min-width: 100%;
+  display: inline-block;
   text-align: center;
   border-bottom: 1px solid #30363d;
 }
