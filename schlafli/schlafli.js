@@ -8,6 +8,7 @@ ChildAppender("input", "CAform");
 	//List with all newly created canvases to iterate through.
 for (var i = 0; i<canimation.length; i++){
 	document.getElementById("CAform"+i).action = "javascript:start("+i+")";
+	document.getElementById("CAinput"+i).placeholder = "a{p/q}";
 }
 
 	//Shläfli math and variables
