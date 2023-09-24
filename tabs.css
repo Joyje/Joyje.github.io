@@ -15,7 +15,7 @@
 .tabMenu {
   width: 100%;
   height: 50px;
-  border-bottom: 1px solid #30363d;
+  border-bottom: 1px solid var(--borderColor);
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -34,8 +34,8 @@
   cursor: pointer;
 }
 .tabMenuEntry:hover {
-  background-color: rgba(33,38,45,0.5);
-  border-bottom: 1px solid #60666d;
+  background-color: var(--menuHighlight);
+  border-bottom: 1px solid var(--borderHighlight);
 }
 .tabContent {
   grid-column-start: 1;

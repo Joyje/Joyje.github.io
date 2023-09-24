@@ -1,12 +1,12 @@
 ::-webkit-scrollbar {
   width: 3px;
-  background-color: #30363d;
+  background-color: var(--borderColor);
 }
 ::-webkit-scrollbar-button {
   display: none;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #60666d;
+  background-color: var(--borderHighlight);
 }
 ::-webkit-scrollbar-track {
   display: none;
@@ -24,7 +24,7 @@
   float: right;
 }
 #scrollToggle:hover {
-  background-color: rgba(33,38,45,0.5);
+  background-color: var(--menuHighlight);
   cursor: pointer;
 }
 #scroll {
@@ -41,7 +41,7 @@
 }
 #scrollNav div {
   width: 100%;
-  border-bottom: 1px solid #30363d;
+  border-bottom: 1px solid var(--borderColor);
   box-sizing: border-box;
 }
 #scrollNav h6{
@@ -51,7 +51,7 @@
   padding: 7vh 0px;
   min-height: 33.5vh;
   max-height: 33.5vh;
-  border-top: 1px solid #30363d;
+  border-top: 1px solid var(--borderColor);
 }
 #scrollNav #sbms2 {
   padding: 0.5vh 0px;

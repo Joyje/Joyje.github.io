@@ -3,8 +3,8 @@
   padding: 0px;
   width: 704px;
   height: 396px;
-  border-top: 1px solid #30363d;
-  border-bottom: 1px solid #30363d;
+  border-top: 1px solid var(--borderColor);
+  border-bottom: 1px solid var(--borderColor);
   overflow: hidden;
   display: grid;
   gap: 0px;
@@ -14,7 +14,7 @@
   padding: 0px;
   width: 303px;
   height: 100%;
-  border-right: 1px solid #30363d;
+  border-right: 1px solid var(--borderColor);
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -22,12 +22,12 @@
 }
 .showcaseMenuEntry {
   margin: 0px;
-  border-top: 1px solid #30363d;
-  border-bottom: 1px solid #30363d;
+  border-top: 1px solid var(--borderColor);
+  border-bottom: 1px solid var(--borderColor);
   cursor: pointer;
 }
 .showcaseMenuEntry:hover {
-  background-color: rgba(33,38,45,0.5);
+  background-color: var(--menuHighlight);
 }
 .showcaseContent {
   margin: 0px;
