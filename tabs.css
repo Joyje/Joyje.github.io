@@ -1,10 +1,10 @@
 .tabber {
-  width: 1280px;
+  width: 640px;
   margin: 0px auto;
   padding: 0px;
   display: grid;
   justify-items: center;
-  grid-template-columns: 320px 320px 320px 320px;  
+  grid-template-columns: 320px 320px;  
   grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px; 
   gap: 0px;
   overflow: hidden;
@@ -17,15 +17,20 @@
   height: 50px;
   border-bottom: 1px solid #30363d;
   grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
+  display: flex;
+}
+.tabMenu label {
+  flex: 1;
 }
 .tabMenuEntry {
-  display: inline-block;
   margin: 0px;
-  width: 200px;
+  padding: 0px;
+  width: 100%;
   height: 100%;
+  display: inline-block;
   cursor: pointer;
 }
 .tabMenuEntry:hover {
@@ -34,12 +39,12 @@
 }
 .tabContent {
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 10;
   display: inherit;
   justify-items: center;
-  grid-template-columns: 320px 320px 320px 320px;  
+  grid-template-columns: 320px 320px ;  
   grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px; 
   visibility: hidden;
   opacity: 0;
@@ -68,10 +73,34 @@
   grid-column-end: 3;
 }
 .tabbedColumn3 {
-  grid-column-start: 3;
-  grid-column-end: 4;
+  display: none;
 }
 .tabbedColumn4 {
-  grid-column-start: 4;
-  grid-column-end: 5;
+  display: none;
+}
+
+@media only screen and (min-width: 1300px)
+{
+  .tabber {
+    width: 1280px;
+    grid-template-columns: 320px 320px 320px 320px;  
+  }
+  .tabMenu {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .tabContent {
+    grid-column-end: 5;
+    grid-template-columns: 320px 320px 320px 320px;  
+  }
+  .tabbedColumn3 {
+    display: block;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .tabbedColumn4 {
+    display: block;
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
 }
