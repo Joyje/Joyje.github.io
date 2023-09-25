@@ -38,6 +38,7 @@
 }
 #scrollNav {
   display: none;
+  line-height: 1.6;
 }
 #scrollNav div {
   width: 100%;
@@ -54,12 +55,12 @@
   border-top: 1px solid var(--borderColor);
 }
 #scrollNav #sbms2 {
-  padding: 0.5vh 0px;
+  padding: 0px;
   min-height: 22.5vh;
   max-height: 22.5vh;
 }
 #scrollNav #sbms3 {
-  padding: 13vh 0px;
+  padding: 12vh 0px;
   min-height: 40.5vh;
   max-height: 40.5vh;
 }

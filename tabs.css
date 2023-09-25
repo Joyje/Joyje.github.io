@@ -73,12 +73,12 @@
   grid-column-end: 4;
 }
 .tabbedColumn3 {
-  visibility: hidden;
+  display: none;
   grid-column-start: 3;
   grid-column-end: 4;
 }
 .tabbedColumn4 {
-  visibility: hidden;
+  display: none;
   grid-column-start: 3;
   grid-column-end: 4;
 }
@@ -98,17 +98,17 @@
     grid-template-columns: 320px 320px 320px 320px;  
   }
   .tabbedColumn2 {
-    visibility: visible;
+    display: block;
     grid-column-start: 2;
     grid-column-end: 3;
   }
   .tabbedColumn3 {
-    visibility: visible;
+    display: block;
     grid-column-start: 3;
     grid-column-end: 4;
   }
   .tabbedColumn4 {
-    visibility: visible;
+    display: block;
     grid-column-start: 4;
     grid-column-end: 5;
   }
