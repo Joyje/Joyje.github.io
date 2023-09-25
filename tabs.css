@@ -1,10 +1,10 @@
 .tabber {
-  width: 640px;
+  width: 700px;
   margin: 0px auto;
   padding: 0px;
   display: grid;
   justify-items: center;
-  grid-template-columns: 320px 320px;  
+  grid-template-columns: 320px 380px;  
   grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px; 
   gap: 0px;
   overflow: hidden;
@@ -44,7 +44,7 @@
   grid-row-end: 10;
   display: inherit;
   justify-items: center;
-  grid-template-columns: 320px 320px ;  
+  grid-template-columns: 320px 30px 320px 30px;  
   grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px; 
   visibility: hidden;
   opacity: 0;
@@ -60,23 +60,27 @@
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 4;
-  grid-row-end: 10;
+  grid-row-end: 9;
 }
 .tabbedColumn2, .tabbedColumn3, .tabbedColumn4 {
   margin: 0px;
   padding 0px;
   grid-row-start: 1;
-  grid-row-end: 10;
+  grid-row-end: 9;
 }
 .tabbedColumn2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 .tabbedColumn3 {
-  display: none;
+  visibility: hidden;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 .tabbedColumn4 {
-  display: none;
+  visibility: hidden;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 @media only screen and (min-width: 1300px)
@@ -93,13 +97,18 @@
     grid-column-end: 5;
     grid-template-columns: 320px 320px 320px 320px;  
   }
+  .tabbedColumn2 {
+    visibility: visible;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
   .tabbedColumn3 {
-    display: block;
+    visibility: visible;
     grid-column-start: 3;
     grid-column-end: 4;
   }
   .tabbedColumn4 {
-    display: block;
+    visibility: visible;
     grid-column-start: 4;
     grid-column-end: 5;
   }

@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Joyje's Showcase</title>
+  <link rel="stylesheet" href="tabs.css">
+  <link rel="stylesheet" href="cards.css">
   <link rel="stylesheet" href="showcase.css">
   <link rel="stylesheet" href="scrollbar.css">
-  <link rel="stylesheet" href="cards.css">
-  <link rel="stylesheet" href="tabs.css">
+  <link rel="stylesheet" href="slideshow.css">
 <style>
   :root {
     --borderColor: #30363d;
@@ -241,70 +242,81 @@
   
         <input type='radio' id='webTab' name='profile' checked>
         <div class='tabContent'>
-  	<div class='tabbedColumn1'>
-  	  <p>
-  	    2015 was the year I got serious about learning how to code.
-  	    I started my journey on KhanAcademy.org.
-  	    <br>
-  	    <br>
-  	    2016 I obtained 2 certificates from SoloLearn.com.
-  	    <br>
-  	    <br>
-  	    For the sake of completion, in 2023 I decided to
-  	    obtain the rest of the SoloLearn certificates related to HTML, CSS and JavaScript.
-  	  </p>
-  	</div>
-  	<div class='tabbedColumn2'>
-  	  <h5>HTML Certificates</h5>
-  	  <a href='https://www.sololearn.com/certificates/CC-Y0JNZEZO'>
-  	    <div class='fullCard'>
-  	      <img src='https://api2.sololearn.com/v2/certificates/CC-Y0JNZEZO/image/png'
-  	      width='300' height='200'>
-  	    </div>
-  	  </a>
-            <a href='https://www.sololearn.com/certificates/CT-8ZUZ8A3O'>
-  	    <div class='fullCard'>
-  	      <img src='https://api2.sololearn.com/v2/certificates/CT-8ZUZ8A3O/image/png'
-  	      width='300' height='200'>
-  	    </div>
-  	  </a>
-  	</div>
-  	<div class='tabbedColumn3'>
-  	  <h5>CSS Certificates</h5>
-  	  <a href='https://www.sololearn.com/certificates/CC-U18Y1UMM'>
-  	    <div class='fullCard'>
-  	      <img src='https://api2.sololearn.com/v2/certificates/CC-U18Y1UMM/image/png'
-  	      width='300' height='200'>
-  	    </div>
-  	  </a>
-            <a href='https://www.sololearn.com/certificates/CC-IRFVAJWU'>
-  	    <div class='fullCard'>
-  	      <img src='https://api2.sololearn.com/v2/certificates/CC-IRFVAJWU/image/png'
-  	      width='300' height='200'>
-  	    </div>
-  	  </a>
-  	</div>
-  	<div class='tabbedColumn4'>
-  	  <h5>JS Certificates</h5>
-            <a href='https://www.sololearn.com/certificates/CC-IY1NAYII'>
-  	    <div class='fullCard'>
-  	      <img src='https://api2.sololearn.com/v2/certificates/CC-IY1NAYII/image/png'
-  	      width='300' height='200'>
-  	    </div>
-  	  </a>
-            <a href='https://www.sololearn.com/certificates/CT-GSVE44IH'>
-  	    <div class='fullCard'>
-  	      <img src='https://api2.sololearn.com/v2/certificates/CT-GSVE44IH/image/png'
-  	      width='300' height='200'>
-  	    </div>
-  	  </a>
-            <a href='https://www.sololearn.com/certificates/CC-AXFYRCTA'>
-  	    <div class='fullCard'>
-  	      <img src='https://api2.sololearn.com/v2/certificates/CC-AXFYRCTA/image/png'
-  	      width='300' height='200'>
-  	    </div>
-  	  </a>
-  	</div>
+  	  <div class='tabbedColumn1'>
+  	    <p>
+  	      2015 was the year I got serious about learning how to code.
+  	      I started my journey on KhanAcademy.org.
+  	      <br>
+  	      <br>
+  	      2016 I obtained 2 certificates from SoloLearn.com.
+  	      <br>
+  	      <br>
+  	      For the sake of completion, in 2023 I decided to
+  	      obtain the rest of the SoloLearn certificates related to HTML, CSS and JavaScript.
+  	    </p>
+  	  </div>
+          <div class='slideshow'>
+	    <script src='slideshow.js'></script>
+            <div class='slideshowLeft' onclick='changeSlide("left")'>
+              <h2>&lt</h2>
+	    </div>
+            <div class='slideshowContent'>
+	    </div>
+            <div class='slideshowRight' onclick='changeSlide("right")'>
+              <h2>&gt</h2>
+	    </div>
+	  </div>
+  	  <div class='tabbedColumn2 slideshowSlide'>
+  	    <h5>HTML Certificates</h5>
+  	    <a href='https://www.sololearn.com/certificates/CC-Y0JNZEZO'>
+  	      <div class='fullCard'>
+  	        <img src='https://api2.sololearn.com/v2/certificates/CC-Y0JNZEZO/image/png'
+  	        width='300' height='200'>
+  	      </div>
+  	    </a>
+              <a href='https://www.sololearn.com/certificates/CT-8ZUZ8A3O'>
+  	      <div class='fullCard'>
+  	        <img src='https://api2.sololearn.com/v2/certificates/CT-8ZUZ8A3O/image/png'
+  	        width='300' height='200'>
+  	      </div>
+  	    </a>
+  	  </div>
+  	  <div class='tabbedColumn3 slideshowSlide'>
+  	    <h5>CSS Certificates</h5>
+  	    <a href='https://www.sololearn.com/certificates/CC-U18Y1UMM'>
+  	      <div class='fullCard'>
+  	        <img src='https://api2.sololearn.com/v2/certificates/CC-U18Y1UMM/image/png'
+  	        width='300' height='200'>
+  	      </div>
+  	    </a>
+              <a href='https://www.sololearn.com/certificates/CC-IRFVAJWU'>
+  	      <div class='fullCard'>
+  	        <img src='https://api2.sololearn.com/v2/certificates/CC-IRFVAJWU/image/png'
+  	        width='300' height='200'>
+  	      </div>
+  	    </a>
+  	  </div>
+  	  <div class='tabbedColumn4 slideshowSlide'>
+  	    <h5>JS Certificates</h5>
+              <a href='https://www.sololearn.com/certificates/CC-IY1NAYII'>
+  	      <div class='fullCard'>
+  	        <img src='https://api2.sololearn.com/v2/certificates/CC-IY1NAYII/image/png'
+  	        width='300' height='200'>
+  	      </div>
+  	    </a>
+              <a href='https://www.sololearn.com/certificates/CT-GSVE44IH'>
+  	      <div class='fullCard'>
+  	        <img src='https://api2.sololearn.com/v2/certificates/CT-GSVE44IH/image/png'
+  	        width='300' height='200'>
+  	      </div>
+  	    </a>
+              <a href='https://www.sololearn.com/certificates/CC-AXFYRCTA'>
+  	      <div class='fullCard'>
+  	        <img src='https://api2.sololearn.com/v2/certificates/CC-AXFYRCTA/image/png'
+  	        width='300' height='200'>
+  	      </div>
+  	    </a>
+  	  </div>
         </div>
   
         <input type='radio' id='bashTab' name='profile'>
@@ -325,31 +337,31 @@
   
         <input type='radio' id='workTab' name='profile'>
         <div class='tabContent'>
-  	<div class='tabbedColumn1'>
-  	  <h5>Current occupation:</h5>
-  	  <div class='fullCard'>
-  	    <h3>2023 - </h3>
-  	    <p>
-  	      Available for hire.
-  	    </p>
-  	  </div>
-  	</div>
-  	<div class='tabbedColumn2'>
-  	  <h5>Timeline</h5>
-  	  <div class='splitCard'>
-  	    <div class='firstHalf'>
-  	      <h3>2018 - 2020</h3>
-  	      <p>Teaching Math and JavaScript at:</p>
-  	      <p>Frysusets grundskola</p>
-  	    </div>
-  	    <div class='secondHalf'>
+  	  <div class='tabbedColumn1'>
+  	    <h5>Current occupation:</h5>
+  	    <div class='fullCard'>
+  	      <h3>2023 - </h3>
+  	      <p>
+  	        Available for hire.
+  	      </p>
   	    </div>
   	  </div>
-  	</div>
-  	<div class='tabbedColumn3'>
-  	</div>
-  	<div class='tabbedColumn4'>
-  	</div>
+  	  <div class='tabbedColumn2'>
+  	    <h5>Timeline</h5>
+  	    <div class='splitCard'>
+  	      <div class='firstHalf'>
+  	        <h3>2018 - 2020</h3>
+  	        <p>Teaching Math and JavaScript at:</p>
+  	        <p>Frysusets grundskola</p>
+  	      </div>
+  	      <div class='secondHalf'>
+  	      </div>
+  	    </div>
+  	  </div>
+  	  <div class='tabbedColumn3'>
+  	  </div>
+  	  <div class='tabbedColumn4'>
+  	  </div>
         </div>
   
       </div>
@@ -368,65 +380,65 @@
       </div>
       <div class='showcase'>
         <aside class='showcaseMenu' id='CanvasMenu'>
-        	<div class='showcaseMenuEntry' onclick='
-		                               var canvas = document.getElementById("CanvasContent");
-                                               var showLoad = document.createElement("p");
-  	                                       showLoad.innerHTML = "Loading<br>...";
-  	                                       showLoad.style.position = "absolute";
-  	                                       showLoad.style.margin = "170px";
-  	                                       showLoad.style.zIndex = "0";
-                                               var silly = document.createElement("iframe");
-                                               silly.src = "KhanAcademy/ShootingStar.html"
-  	                                       silly.style.position = "relative";
-  	                                       silly.style.zIndex = "1";
-                                               canvas.replaceChildren(showLoad, silly);
-					       '>
+          <div class='showcaseMenuEntry' onclick='
+	                                 var canvas = document.getElementById("CanvasContent");
+                                         var showLoad = document.createElement("p");
+  	                                 showLoad.innerHTML = "Loading<br>...";
+  	                                 showLoad.style.position = "absolute";
+  	                                 showLoad.style.margin = "170px";
+  	                                 showLoad.style.zIndex = "0";
+                                         var silly = document.createElement("iframe");
+                                         silly.src = "KhanAcademy/ShootingStar.html"
+  	                                 silly.style.position = "relative";
+  	                                 silly.style.zIndex = "1";
+                                         canvas.replaceChildren(showLoad, silly);
+					 '>
             <h3> Shooting Star </h3>
-        	</div>
-        	<div class='showcaseMenuEntry' onclick='
-		                               var canvas = document.getElementById("CanvasContent");
-                                               var showLoad = document.createElement("p");
-  	                                       showLoad.innerHTML = "Loading<br>...";
-  	                                       showLoad.style.position = "absolute";
-  	                                       showLoad.style.margin = "170px";
-  	                                       showLoad.style.zIndex = "0";
-                                               var silly = document.createElement("iframe");
-                                               silly.src = "KhanAcademy/MakeItRain.html"
-  	                                       silly.style.position = "relative";
-  	                                       silly.style.zIndex = "1";
-                                               canvas.replaceChildren(showLoad, silly);
-					       '>
+          </div>
+          <div class='showcaseMenuEntry' onclick='
+	                                 var canvas = document.getElementById("CanvasContent");
+                                         var showLoad = document.createElement("p");
+  	                                 showLoad.innerHTML = "Loading<br>...";
+  	                                 showLoad.style.position = "absolute";
+  	                                 showLoad.style.margin = "170px";
+  	                                 showLoad.style.zIndex = "0";
+                                         var silly = document.createElement("iframe");
+                                         silly.src = "KhanAcademy/MakeItRain.html"
+  	                                 silly.style.position = "relative";
+  	                                 silly.style.zIndex = "1";
+                                         canvas.replaceChildren(showLoad, silly);
+					 '>
             <h3> Make it Rain </h3>
-        	</div>
-        	<div class='showcaseMenuEntry' onclick='
-		                               var canvas = document.getElementById("CanvasContent");
-                                               var showLoad = document.createElement("p");
-  	                                       showLoad.innerHTML = "Loading<br>...";
-  	                                       showLoad.style.position = "absolute";
-  	                                       showLoad.style.margin = "170px";
-  	                                       showLoad.style.zIndex = "0";
-                                               var silly = document.createElement("iframe");
-                                               silly.src = "KhanAcademy/Piggyface.html"
-  	                                       silly.style.position = "relative";
-  	                                       silly.style.zIndex = "1";
-                                               canvas.replaceChildren(showLoad, silly);
-					       '>
+          </div>
+          <div class='showcaseMenuEntry' onclick='
+	                                 var canvas = document.getElementById("CanvasContent");
+                                         var showLoad = document.createElement("p");
+  	                                 showLoad.innerHTML = "Loading<br>...";
+  	                                 showLoad.style.position = "absolute";
+  	                                 showLoad.style.margin = "170px";
+  	                                 showLoad.style.zIndex = "0";
+                                         var silly = document.createElement("iframe");
+                                         silly.src = "KhanAcademy/Piggyface.html"
+  	                                 silly.style.position = "relative";
+  	                                 silly.style.zIndex = "1";
+                                         canvas.replaceChildren(showLoad, silly);
+					 '>
             <h3> Piggyface </h3>
-        	</div>
-        	<div class='showcaseMenuEntry' onclick='
-		                               var canvas = document.getElementById("CanvasContent");
-                                               var showLoad = document.createElement("p");
-  	                                       showLoad.innerHTML = "Loading<br>...";
-  	                                       showLoad.style.position = "absolute";
-  	                                       showLoad.style.margin = "170px";
-  	                                       showLoad.style.zIndex = "0";
-                                               var silly = document.createElement("iframe");
-                                               silly.src = "KhanAcademy/FishTank.html"
-  	                                       silly.style.position = "relative";
-  	                                       silly.style.zIndex = "1";
-                                               canvas.replaceChildren(showLoad, silly);'>
+          </div>
+          <div class='showcaseMenuEntry' onclick='
+                                         var canvas = document.getElementById("CanvasContent");
+                                         var showLoad = document.createElement("p");
+  	                                 showLoad.innerHTML = "Loading<br>...";
+  	                                 showLoad.style.position = "absolute";
+  	                                 showLoad.style.margin = "170px";
+  	                                 showLoad.style.zIndex = "0";
+                                         var silly = document.createElement("iframe");
+                                         silly.src = "KhanAcademy/FishTank.html"
+  	                                 silly.style.position = "relative";
+  	                                 silly.style.zIndex = "1";
+                                         canvas.replaceChildren(showLoad, silly);'>
             <h3> Fish Tank </h3>
-        	</div>
+          </div>
         </aside>
         <div class='showcaseContent' id='CanvasContent'>
         </div>
