@@ -7,15 +7,15 @@ window.onload = function() {
 }
 
 function changeSlide(direction) {
-  slides[slideIndex].style.visibility = 'hidden';
+  slides[slideIndex].style.display = 'none';
   switch(direction) {
     case 'left':
       if (slideIndex == 0) slideIndex = slides.length;
-      slides[--slideIndex].style.visibility = 'visible';
+      slides[--slideIndex].style.display = 'block';
       break;
     case 'right':
       if (slideIndex == slides.length-1) slideIndex = -1;
-      slides[++slideIndex].style.visibility = 'visible';
+      slides[++slideIndex].style.display = 'block';
       break;
   }
 }
