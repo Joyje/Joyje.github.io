@@ -28,6 +28,8 @@
 }
 .showcaseMenuEntry:hover {
   background-color: var(--menuHighlight);
+  border-top: 1px solid var(--borderHighlight);
+  border-bottom: 1px solid var(--borderHighlight);
 }
 .showcaseContent {
   margin: 0px;

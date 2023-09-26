@@ -18,52 +18,59 @@
   display: none;
 }
 #scrollToggle {
-  padding: 9px 32px;
-  max-height: 5vh;
-  box-sizing: border-box;
+  padding: 0px 25px 0px 5px;
+  height: 100%;
   float: right;
+  display: flex;
+  align-items: center;
 }
 #scrollToggle:hover {
   background-color: var(--menuHighlight);
   cursor: pointer;
 }
 #scroll {
-  padding-top: 1.5vh;
   width: 32px;
   height: 100vh;
-  position: fixed;
   box-sizing: border-box;
+  position: fixed;
   top: 0px;
   right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#scroll:has([type='checkbox']:checked) {
+  border-left: 3px solid var(--borderColor);
+}
+#scroll input{
+  margin: 0px;
+  padding: 0px;
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 5px;
 }
 #scrollNav {
-  display: none;
-  line-height: 1.6;
-}
-#scrollNav div {
   width: 100%;
-  border-bottom: 1px solid var(--borderColor);
-  box-sizing: border-box;
+  display: none;
+  line-height: 1.4;
+}
+#scroll [type='checkbox']:checked + #scrollNav {
+  display: block;
 }
 #scrollNav h6{
   margin: auto;
 }
-#scrollNav #sbms1 {
-  padding: 7vh 0px;
-  min-height: 33.5vh;
-  max-height: 33.5vh;
+.scrollSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-top: 1px solid var(--borderColor);
+  box-sizing: border-box;
 }
-#scrollNav #sbms2 {
-  padding: 0px;
-  min-height: 22.5vh;
-  max-height: 22.5vh;
-}
-#scrollNav #sbms3 {
-  padding: 12vh 0px;
-  min-height: 40.5vh;
-  max-height: 40.5vh;
-}
-#scroll [type='checkbox']:checked + #scrollNav {
-  display: block;
+.scrollSection:hover {
+  background-color: var(--menuHighlight);
+  border-top: 1px solid var(--borderHighlight);
 }

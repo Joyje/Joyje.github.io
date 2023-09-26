@@ -28,6 +28,6 @@
 }
 .splitCard:hover, .fullCard:hover {
   transform: scale(1.03);
+  background-color: var(--menuHighlight);
   border: 1px solid var(--borderHighlight);
-  background-color: var(--borderHighlight);
 }

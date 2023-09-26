@@ -72,9 +72,10 @@
     height: 50px;
     width: 100vw;
     max-width: 100%;
-    display: flex;
-    background-color: var(--menuColor);
     border-bottom: 1px solid var(--borderColor);
+    background-color: var(--menuColor);
+    display: flex;
+    align-items: center;
   }
   header a {
     color: #f0f6fc;
@@ -86,11 +87,11 @@
     flex: 1;
   }
   #source {
-    margin: 0px;
-    padding: 9px;
-    width: 160px;
-    height: 32px;
+    padding: 0px 5px;
+    height: 100%;
     float: left;
+    display: flex;
+    align-items: center;
   }
   #source img {
     width: 32px;
@@ -178,21 +179,28 @@
   </header>
 
   <aside id='scroll'>
-    <input type='checkbox' id='sb'>
+    <script src='scrollbar.js'></script>
+    <input type='checkbox' id='sb' onclick='scrollNav();'>
     <nav id='scrollNav'>
       <a href='#ms1'>
-        <div id='sbms1'>
-	  <h5>P<br>r<br>o<br>f<br>i<br>l<br>e</h5>
+        <div class='scrollSection'>
+	  <div>
+	    <h5>P<br>r<br>o<br>f<br>i<br>l<br>e</h5>
+	  </div>
 	</div>
       </a>
       <a href='#ms2'>
-        <div id='sbms2'>
-	  <h5>2<br>D<br><br>C<br>a<br>n<br>v<br>a<br>s</h5>
+        <div class='scrollSection'>
+	  <div>
+	    <h5>2<br>D<br><br>C<br>a<br>n<br>v<br>a<br>s</h5>
+	  </div>
 	</div>
       </a>
       <a href='#ms3'>
-        <div id='sbms3'>
-	  <h5>W<br>e<br>b<br>G<br>L</h5>
+        <div class='scrollSection'>
+	  <div>
+	    <h5>W<br>e<br>b<br>G<br>L</h5>
+	  </div>
 	</div>
       </a>
     </nav>
