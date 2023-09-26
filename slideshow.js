@@ -4,10 +4,11 @@ let slides;
  
 window.onload = function() {
   slides = document.getElementsByClassName(slideShow.classList[0] + 'Slide');
+  slides[slideIndex].style.display = 'block';
 }
 
 function changeSlide(direction) {
-  slides[slideIndex].style.display = 'none';
+  slides[slideIndex].style.removeProperty('display');
   switch(direction) {
     case 'left':
       if (slideIndex == 0) slideIndex = slides.length;

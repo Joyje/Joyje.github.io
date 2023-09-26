@@ -73,12 +73,10 @@
   grid-column-end: 4;
 }
 .tabbedColumn3 {
-  display: none;
   grid-column-start: 3;
   grid-column-end: 4;
 }
 .tabbedColumn4 {
-  display: none;
   grid-column-start: 3;
   grid-column-end: 4;
 }

@@ -34,9 +34,15 @@
   grid-row-start: 1;
   grid-row-end: 4;
 }
+.slideshowSlide {
+  display: none;
+}
 @media only screen and (min-width: 1300px)
 {
   .slideshow {
     display: none;
+  }
+  .slideshowSlide {
+    display: block;
   }
 }
