@@ -8,10 +8,12 @@
   grid-template-rows: 50px 750px;  
 }
 .slideshowLeft, .slideshowRight {
-  padding: 10px 0px;
   grid-row-start: 1;
   grid-row-end: 2;
   background-color: var(--menuColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .slideshowLeft:hover, .slideshowRight:hover {
   background-color: var(--menuHighlight);
