@@ -24,6 +24,10 @@
     --borderHighlight: #60666d;
     --menuHighlight: rgba(33,38,45,0.5);
   }
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
   body {
     margin: 0;
     background-color: #0d1117;
@@ -54,9 +58,6 @@
     margin: 7px;
     float: inherit;
   }
-  p {
-    font-size: 16px;
-  }
   a {
     color: #1f6feb;
     text-decoration: none;
@@ -82,7 +83,8 @@
     display: flex;
     align-items: center;
   }
-  header a {
+  header a, header label {
+    height: 100%;
     color: #f0f6fc;
   }
   header > div {
@@ -175,8 +177,8 @@
       <h1><i>Joyje's Showcase</i></h1>
     </div>
     <div>
-      <label for='sb'>
-        <div id='scrollToggle'>
+      <label id='scrollToggle' for='sb'>
+        <div>
           <h4>Scroll Nav</h4>
         </div>
       </label>
